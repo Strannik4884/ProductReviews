@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}О проекте{% endblock %}
+
+{% block content %}
+    <!-- About -->
+    <div class="row">
+        <div class="col s12 center-align">
+            <h3>Отзовик</h3>
+            <h5>Сайт предназначен оставления отзывов на товары</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <span class="about-text">На всех страницах в шапке сайта для неавторизованных пользователей выводить ссылки на авторизацию и регистрацию, для авторизованных - приветствие, кнопку <button class="btn waves-effect waves-light">Выход</button> и имя пользователя.</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <div class="row">
+                <div class="col xl6 l12 m12 s12">
+                    <span class="about-text">Navbar неавторизованного пользователя:</span>
+                </div>
+                <div class="col xl6 l12 m12 s12">
+                    <img src="./images/anon-navbar.png">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col xl6 l12 m12 s12">
+                    <span class="about-text">Navbar авторизованного пользователя:</span>
+                </div>
+                <div class="col xl6 l12 m12 s12">
+                    <img src="./images/logged-user-navbar.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="row">
+            <div class="col xl6 s12 center-align">
+                <img src="./images/register-form.png">
+                <p class="about-text">Форма регистрации</p>
+            </div>
+            <div class="col xl6 s12 center-align">
+                <img src="./images/login-form.png">
+                <p class="about-text">Форма входа</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+                <span class="about-text">На главной странице выводятся товары, отсортированные по дате добавления. У каждого товара выводится название (ссылка на страницу товара), дата добавления, количество отзывов и средняя оценка товара.
+                <br/><br/>На странице товара выводится информация о товаре:
+                </span>
+            <div class="collection about-text">
+                <a role="button" class="collection-item">название;</a>
+                <a role="button" class="collection-item">дата добавления;</a>
+                <a role="button" class="collection-item">текст описания;</a>
+                <a role="button" class="collection-item">список отзывов, отсортированных по дате добавления;</a>
+                <a role="button" class="collection-item">форма "Оставить отзыв" (оценка, текстовое поле и кнопка <button class="btn waves-effect waves-light">Отправить</button>).</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <span class="about-text">На странице добавления товара располагается форма с полями:</span>
+            <div class="collection about-text">
+                <a role="button" class="collection-item">название;</a>
+                <a role="button" class="collection-item">описание.</a>
+            </div>
+            <span class="about-text">Все поля обязательные. Если какие-то из введенных значений невалидны, сохранения в БД не происходит, на форме выводятся сообщения об ошибках.
+                    Заполненные пользователем текстовые поля не сбрасываются. После успешной отправки выполнять редирект на страницу созданного товара. Все пользователи (в том числе неавторизованные) могут просматривать товары и отзывы к ним.
+                    Авторизованные пользователи могут оставлять отзывы. Пользователь с правами администратора должен иметь возможность добавления, удаления и редактирования товаров, а также удаления отзывов.
+                    При этом после добавления и удаления отзывов средний рейтинг товара на главной должен быть актуальным.</span>
+        </div>
+    </div>
+{% endblock %}
